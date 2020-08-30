@@ -10,7 +10,8 @@
   "scripts": {
     "clean": "del-cli ./build/*",
     "build": "npm run clean && tsc",
-    "pub": "npm version patch && npm run build && npm publish"
+    "git:push": "git add . && git commit -m 'update' && git push origin master",
+    "pub": "npm run git:push && npm version patch && npm run build && npm publish --access=public"
   },
   "keywords": [],
   "author": "",
