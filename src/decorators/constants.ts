@@ -3,6 +3,7 @@ export enum MetadataKeys {
   PATH = 'path',
   VALIDATORS = 'validators',
   MIDDLEWARE = 'middleware',
+  PREVALIDATE_MIDDLEWARE = 'pre-middleware',
 }
 
 export enum METHOD {

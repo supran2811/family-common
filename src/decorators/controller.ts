@@ -14,6 +14,14 @@ export const controller = (routePath: string, router: any): Function => {
         target.prototype,
         key
       );
+
+      const preValidatemiddlewares =
+        Reflect.getMetadata(
+          MetadataKeys.PREVALIDATE_MIDDLEWARE,
+          target.prototype,
+          key
+        ) || [];
+
       const validators =
         Reflect.getMetadata(MetadataKeys.VALIDATORS, target.prototype, key) ||
         [];
@@ -22,6 +30,7 @@ export const controller = (routePath: string, router: any): Function => {
         [];
 
       router[method](
+        ...preValidatemiddlewares,
         routePath + path,
         validators,
         ...middlewares,
