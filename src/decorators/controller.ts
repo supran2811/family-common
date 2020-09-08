@@ -30,8 +30,8 @@ export const controller = (routePath: string, router: any): Function => {
         [];
 
       router[method](
-        ...preValidatemiddlewares,
         routePath + path,
+        ...preValidatemiddlewares,
         validators,
         ...middlewares,
         target.prototype[key]
