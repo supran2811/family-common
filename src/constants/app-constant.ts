@@ -6,3 +6,9 @@ export enum HTTP_CODE {
   HTTP_FORBIDDEN = 403,
   HTTP_UNAUTHORISED = 401,
 }
+
+export enum ItemStatus {
+  DONE = 'done',
+  PENDING = 'pending',
+  MISSING = 'missing',
+}
