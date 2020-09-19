@@ -5,6 +5,6 @@ export interface GroupAssociated {
   data: {
     userid: string;
     groupid: string;
-    version: string;
+    version: number;
   };
 }

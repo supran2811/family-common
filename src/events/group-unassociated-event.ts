@@ -4,6 +4,6 @@ export interface GroupUnAssociated {
   subject: Subjects.GroupUnAssociated;
   data: {
     userid: string;
-    version: string;
+    version: number;
   };
 }
