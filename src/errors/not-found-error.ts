@@ -5,6 +5,7 @@ export class NotFoundError extends BaseError {
   statusCode = HTTP_CODE.HTTP_NOT_FOUND;
   constructor() {
     super('URL not found');
+    Object.setPrototypeOf(this, NotFoundError.prototype);
   }
 
   serialize() {
